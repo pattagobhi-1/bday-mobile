@@ -488,11 +488,22 @@ h1, h2, h3, h4, .font-bungee { font-family: 'Bungee', cursive; }
                           <div className="mb-2 text-center">
                             <h4 className="font-bungee text-[10px] italic uppercase text-pink-600 tracking-widest">SMOL POWER SCALE</h4>
                           </div>
-                          <div className="bg-white p-4 border-[3px] border-black rounded-3xl shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] w-[80vw] max-w-[280px] h-[220px] flex flex-col items-center justify-end overflow-visible">
+                          <div className="relative bg-white p-8 ... h-[340px] flex flex-col ... overflow-visible">
                             <div className="flex items-end justify-center gap-6 h-32 border-b-2 border-black pb-2 px-2 w-full relative">
                               <div className="flex flex-col items-center"><div className="w-8 bg-pink-400 border-2 border-black rounded-t-lg" style={{ height: 100 }}></div><span className="text-[8px] font-black font-bungee mt-1">BICEPS</span></div>
                               <div className="flex flex-col items-center"><motion.div className="w-8 border-2 border-black rounded-t-lg bg-cyan-400 origin-bottom" animate={{ height: myHeightRaw }} /><span className="text-[8px] font-black font-bungee mt-1">SMOL</span></div>
-                              {isHeightExceeded && <div className="absolute -top-12 -right-4 bg-red-600 text-white p-2 text-[8px] font-black rounded-xl rotate-12 animate-pulse border-2 border-black font-bungee leading-tight shadow-xl z-20">ROOF BROKEN!</div>}
+                              {isHeightExceeded && (
+  <motion.div
+    initial={{ scale: 0, rotate: -20 }}
+    animate={{ scale: 1.2, rotate: 8 }}
+    className="absolute -top-40 right-[-60px] z-50
+               bg-red-600 text-white p-5 text-xs
+               font-black rounded-2xl border-4 border-black
+               font-bungee leading-tight shadow-2xl"
+  >
+    ROOF<br/>BROKEN !!!!!!!
+  </motion.div>
+)}
                             </div>
                           </div>
                           <p className="text-xl font-black text-pink-600 mt-4 uppercase italic font-bungee">Height Graph</p>
@@ -773,5 +784,6 @@ h1, h2, h3, h4, .font-bungee { font-family: 'Bungee', cursive; }
     </script>
 </body>
 </html>
+
 
 
